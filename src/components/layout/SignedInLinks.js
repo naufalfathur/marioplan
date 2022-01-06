@@ -5,11 +5,14 @@ import { signOut } from "../../store/actions/authActions";
 
 const SignInLinks = (props) => {
   return (
-    <ul className="right">
-        <li><NavLink to='/create'>New Project</NavLink></li>
-        <li><a onClick={props.signOut}>Log Out</a></li>
-        <li><NavLink to='/' className='btn btn-floating pink lighten-1'>{props.profile.initials}</NavLink></li>
+    <div className="collapse navbar-collapse">
+      <ul className="navbar-nav ms-auto">
+        <li className="nav-item"><NavLink className="nav-link" to='/create'>New Project</NavLink></li>
+        <li className="nav-item"><a className="nav-link" onClick={props.signOut} href="">Log Out</a></li>
+        <strong className="nav-link ">{props.profile.firstName} {props.profile.lastName}</strong>
+        <li className="nav-item"><NavLink className="nav-link" to='/' className='btn btn-circle'>{props.profile.initials}</NavLink></li>
     </ul>
+    </div>
   );
 };
 

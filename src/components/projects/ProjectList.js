@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 export default function ProjectList({ projects }) {
   return (
-    <div className="project-list section">
+    <div className="project-list d-grid gap-3">
       {projects &&
         projects.map((project) => {
           return (
-            <Link to={'/project/' + project.id} key={project.id}>
+            <Link className="text-decoration-none" to={'/project/' + project.id} key={project.id}>
               <ProjectSummary project={project}  />
             </Link>
           );

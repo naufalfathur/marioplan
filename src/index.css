@@ -1,28 +1,164 @@
-html{
+.card {
+  border: none;
+}
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+html {
   min-height: 100%;
 }
 
-body{
+body {
+  background-color: #fcfcfc;
   min-height: 100%;
-  background: url(img/mario-bg.png) no-repeat;
+  background: url(img/bg.png) center;
   background-size: 100%;
-  background-position: bottom;
-  background-color: #95e8f3;
+  background-position: top;
 }
 
-form{
-  padding: 20px;
-  margin-top: 60px;
-}
-
-form button, form h5{
+form button,
+form h5 {
   margin: 20px 0;
 }
 
-nput[type=text]:not(.browser-default):focus:not([readonly]),
-input[type=email]:not(.browser-default):focus:not([readonly]),
-input[type=password]:not(.browser-default):focus:not([readonly]),
-textarea.materialize-textarea:focus:not([readonly]){
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
   border-color: #ec407a;
   box-shadow: none;
+}
+
+.text-decoration-none {
+  color: black;
+}
+
+.text-decoration-none :hover {
+  color: black;
+}
+
+.project-summary {
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.project-summary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.project-details {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.page-body {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.white-bg {
+  background-color: white;
+  box-shadow: 2px 7px 33px -17px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 2px 7px 33px -17px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 2px 7px 33px -17px rgba(0, 0, 0, 0.12);
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 9px 0;
+  font-weight: 800;
+  color: white;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 25px;
+  background-color: #ec407a;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.card-title {
+  font-weight: 650;
+}
+
+.card-subtitle {
+  font-size: 13px;
+}
+
+.side-icon {
+  width: 40px;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #db2129;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: #545454;
+}
+
+.nav-link:hover {
+  color: #545454;
+  font-weight: 500;
+}
+
+.notification-title {
+  background-color: #db2129;
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.sidenav {
+  height: 80%;
+  position: fixed;
+  width: 260px;
+}
+
+
+.upvote{
+  cursor: pointer;
+  color: #C4C4C4;
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+  0.3s box-shadow,
+  0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+.upvote:hover{
+  transform: scale(1.55);
+  color: #4485FD;
+}
+
+.downvote{
+  cursor: pointer;
+  color: #C4C4C4;
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+  0.3s box-shadow,
+  0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+.downvote:hover{
+  transform: scale(1.55);
+  color: #db2129;
 }

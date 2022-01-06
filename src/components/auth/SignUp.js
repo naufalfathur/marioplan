@@ -24,29 +24,70 @@ class SignUp extends Component {
     const { auth, authError } = this.props;
     if (auth.uid) return <Navigate to="/" />;
     return (
-      <div className="container">
-        <form className="white" onSubmit={this.handleSubmit}>
-          <h5 className="grey-text text-darken-3">Sign Up</h5>
-          <div className="input-field">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="lastName">Last Name</label>
-            <input type="text" id="lastName" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Sign Up</button>
-            <div className="red-text center">
-              {authError ? <p>{authError}</p> : null}
+      <div className="card col-8 shadow-lg bg-body rounded">
+        <form className="" onSubmit={this.handleSubmit}>
+          <div className="row">
+            <div class="col-md-4">
+              <img
+                className="img-fluid rounded-start"
+                style={{height: '100%', 'object-fit': 'cover'}}
+                src="https://images.unsplash.com/photo-1624811072711-3e3481f355fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2103&q=80"
+                alt="Girl in a jacket"
+              />
+            </div>
+            <div className="col-7 me-5">
+              <h5 className="card-title">Create New Account</h5>
+              <hr />
+              <div className="mb-3">
+                <label className="form-label" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  className="form-control"
+                  type="email"
+                  id="email"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label className="form-label" htmlFor="password">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  className="form-control"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label className="form-label" htmlFor="firstName">
+                  First Name
+                </label>
+                <input
+                  className="form-control"
+                  type="text"
+                  id="firstName"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label className="form-label" htmlFor="lastName">
+                  Last Name
+                </label>
+                <input
+                  className="form-control"
+                  type="text"
+                  id="lastName"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <button className="btn  btn-danger">Sign Up</button>
+                <div className="red-text center">
+                  {authError ? <p>{authError}</p> : null}
+                </div>
+              </div>
             </div>
           </div>
         </form>

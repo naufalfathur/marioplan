@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import SignInLinks from "./SignedInLinks";
 import SignOutLinks from "./SignedOutLinks";
 import { connect } from "react-redux";
+import logo from "../../img/Logo.png";
 
 const Navbar = (props) => {
-  const {auth, profile} = props
-  const links = auth.uid ? <SignInLinks profile={profile}/> : <SignOutLinks/>
+  const { auth, profile } = props;
+  const links = auth.uid ? <SignInLinks profile={profile} /> : <SignOutLinks />;
   return (
-    <nav className="nav-wrapper grey darken-3">
+    <nav className="navbar sticky-top navbar-expand navbar-light white-bg ">
       <div className="container">
-        <Link to="/" className="brand-logo left">
-          MarioPlan
+        <Link to="/" className="navbar-brand">
+          <img src={logo} />
         </Link>
         {links}
       </div>
@@ -22,7 +23,7 @@ const Navbar = (props) => {
 const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
-    profile: state.firebase.profile
+    profile: state.firebase.profile,
   };
 };
 
